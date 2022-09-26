@@ -137,7 +137,7 @@ const year = 2022;
 const juanCarlos = "I'm " + firstName + ", a " + (year - birthYear) + ' years old and i am a ' + job + "!";
 console.log(juanCarlos);
 
-const juanCarlosNew = `I'm ${firstName}, a ${year - birthYear} year old, I'm a ${job}. `;
+const juanCarlosNew = `I'm ${firstName}, a ${year - birthYear} year old, I'm a ${job}. `; // call string ellision
 console.log(juanCarlosNew);
 
 console.log(`Just a regular String...`);
@@ -228,10 +228,11 @@ if (height) {
 
 // 22. Equiality Operator: == vs ===
 const age = 18;
-if(age === 18) console.log('You just became an adult :D! (strict)');
+if(age === 18) console.log('You just became an adult :D! (strict)'); // same type
 
 
-if(age == 18) console.log('You just became an adult :D! (loose)');
+if(age == 18) console.log('You just became an adult :D! (loose)'); // convert types true
+if(age === "18") console.log('You just became an adult :D! (loose)'); // false
 
 const favourite = Number(prompt("What is your favourite number?"))
 console.log(favourite)
@@ -256,7 +257,7 @@ const hasDriversLicense = true; // A
 const hasGoodVision = false; // B
 
 console.log(hasDriversLicense & hasGoodVision); // false
-console.log(hasDriversLicense || hasGoodVision); // true
+console.log(hasDriversLicense || hasGoodVision); // true  ( or )
 console.log(!hasDriversLicense); // false
 
 
@@ -313,7 +314,7 @@ switch (day) {
     case 'monday':
         console.log('Plan course structure');
         console.log('Go to coding meetup');
-        break;
+        // break;
     case 'tuesday':
         console.log('Prepare theory videos')
         break;
