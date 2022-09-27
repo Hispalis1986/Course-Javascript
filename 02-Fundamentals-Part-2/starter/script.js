@@ -137,7 +137,7 @@ scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 console.log(scoreDolphins,scoreKoalas);
 checkWinner(scoreDolphins,scoreKoalas);
-*/
+
 
 // 39. Introduction to Arrays
 const friend1 = 'Juan Carlos'
@@ -176,3 +176,34 @@ console.log(age1, age2, age3)
 
 const ages = [calcAge(yearsAgain[0]), calcAge(yearsAgain[1]), calcAge(yearsAgain[yearsAgain.length - 1])];
 console.log(ages)
+
+
+// 40. Basic Array Operations( Methods )
+const friends = ['Juan Carlos', 'Anna', 'Leo'];
+
+// Add elements
+const newLength = friends.push('Fran'); // añade al final Fran al Array
+console.log(friends)
+console.log(newLength)
+
+friends.unshift('John'); // añade al principio del array John
+console.log(friends);
+
+// Remove elements
+friends.pop() // elimina el ultimo array
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+console.log(friends.indexOf('Anna')); // 1
+
+console.log(friends.includes('Anna')) // true
+console.log(friends.includes('Alonso')) // false
+
+if(friends.includes('Anna')) {
+    console.log('You have a friend called Anna');
+}
+*/
