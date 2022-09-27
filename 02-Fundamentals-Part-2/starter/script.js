@@ -219,7 +219,7 @@ const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 console.log(bills, tips, totals);
-*/
+
 
 // 42. Objects
 
@@ -263,3 +263,25 @@ console.log(juanObject)
 // Challenge
 // juanObject has 3 friends, and his best friend is called Michael.
 console.log(`${juanObject.firstName} has ${juanObject.friends.length} friends, and his best friend is called ${juanObject.friends[0]}.`)
+*/
+
+// 44. Object Methods
+const juanObject = {
+    firstName: 'Juan Carlos',
+    lastName: 'Royano',
+    age: 2037 - 1986,
+    job: 'Programmer',
+    friends: ['Michael', 'Benedikt', 'Andy'],
+    hasDrivesLicense: true,
+
+    calcAge: function(birthYear) {
+        return 2040 - birthYear
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}`
+    }
+};
+
+console.log(juanObject.calcAge(1986));
+console.log(juanObject['calcAge'] (1991));
