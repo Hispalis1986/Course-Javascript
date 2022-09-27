@@ -206,7 +206,7 @@ console.log(friends.includes('Alonso')) // false
 if(friends.includes('Anna')) {
     console.log('You have a friend called Anna');
 }
-*/
+
 
 // 41. Coding challenge
 
@@ -219,3 +219,47 @@ const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
 console.log(bills, tips, totals);
+*/
+
+// 42. Objects
+
+const juanArray = [
+    'Juan Carlos',
+    'Royano',
+    2037 - 1986,
+    'Programmer',
+    ['Michael', 'Benedikt', 'Andy']
+];
+
+const juanObject = {
+    firstName: 'Juan Carlos',
+    lastName: 'Royano',
+    age: 2037 - 1986,
+    job: 'Programmer',
+    friends: ['Michael', 'Benedikt', 'Andy'],
+};
+console.log(juanObject);
+
+console.log(juanObject.lastName);
+console.log(juanObject['lastName']);
+
+const nameKey = 'Name';
+console.log(juanObject['first' + nameKey]) // Juan Carlos   
+console.log(juanObject['last' + nameKey]) // Royano
+
+// const interestedIn = prompt('What do you want to know about JuanObject? Choose between firstName, lastName, age, job and friends');
+// console.log(juanObject[interestedIn]);
+
+// if (juanObject[interestedIn]) {
+//     console.log(juanObject[interestedIn]);
+// } else {
+//     console.log('Wrong request!')
+// }
+
+juanObject.location = "Spain";
+juanObject['twitter'] = '@Hispalis1986';
+console.log(juanObject)
+
+// Challenge
+// juanObject has 3 friends, and his best friend is called Michael.
+console.log(`${juanObject.firstName} has ${juanObject.friends.length} friends, and his best friend is called ${juanObject.friends[0]}.`)
