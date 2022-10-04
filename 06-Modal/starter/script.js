@@ -24,6 +24,7 @@ overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', function (e) {
   console.log(e.key);
 
+  //   if the model does not contain the class of hidden, then close the modal
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal();
   }
