@@ -30,4 +30,4 @@ function calcAge(birthYear) {
 const firstName = 'Juan Carlos';
 calcAge(1986);
 
-// bellow
+// bellow / greater / less

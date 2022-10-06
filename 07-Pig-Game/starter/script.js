@@ -52,7 +52,7 @@ btnRoll.addEventListener('click', function () {
 
     // 2. Dispaly dice
     diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`; // we can dunamically load one og these six images here
+    diceEl.src = `dice-${dice}.png`; // we can dinamically load one og these six images here
 
     // 3. Check for rolled 1: if true, switch to next player
     if (dice !== 1) {
