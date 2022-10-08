@@ -26,4 +26,62 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}.`
+    );
+  },
 };
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+restaurant.orderDelivery({
+  address: 'Calle Lora 60',
+  starterIndex: 1,
+});
+
+const { name, openingHours, categories } = restaurant; // Created 3 news variables.
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant; // Created 3 news variables.
+console.log(restaurantName, hours, tags);
+
+// Default values
+const { menu = [], starterMenu: starters = [] } = restaurant; // New variable and show in console the startMenu
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj); // curly brackets can't go alone, they need a parenthesis first
+console.log(a, b);
+
+// Para mi
+// Corchetes []: Brackets, Klammern
+// Parentesis (): Parenthesis, Parenthese
+// llaves {}: curly brackets, geschweifte Klammern
+
+// Nested Objects
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(`Open: ${open}h and Close: ${close}h.`);

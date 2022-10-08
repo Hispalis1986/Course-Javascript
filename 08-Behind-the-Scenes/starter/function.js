@@ -3,6 +3,7 @@
 var firstName = 'Matilda';
 
 const jonas = {
+  // this  = jonas
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
