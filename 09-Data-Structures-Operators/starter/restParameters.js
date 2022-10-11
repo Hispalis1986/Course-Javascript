@@ -30,6 +30,10 @@ const restaurant = {
       `Here is your delicius food with ${ingredient1}, ${ingredient2} and ${ingredient3}.`
     );
   },
+  orderFood2: function (mainngredient, ...otherIngredients) {
+    console.log(mainngredient);
+    console.log(otherIngredients);
+  },
 };
 
 // Destructuring
@@ -51,3 +55,19 @@ console.log(Carnes, Postres, otherFood);
 // Object
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
+
+// 2) Functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(2, 3); // 5
+add(5, 3, 7, 2); // 17
+add(8, 2, 5, 3, 2, 1, 4); // 25
+
+const x = [23, 5, 7]; // suma y añade a X
+add(...x);
+
+restaurant.orderFood2('mushrooms', 'onion', 'olives', 'spinach');

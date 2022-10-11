@@ -76,8 +76,8 @@ const obj = { a: 23, b: 7, c: 14 };
 console.log(a, b);
 
 // Para mi
-// Corchetes []: Brackets, Klammern
-// Parentesis (): Parenthesis, Parenthese
+// Corchetes []: Brackets, eckige Klammern
+// Parentesis (): Parenthesis, Klammern
 // llaves {}: curly brackets, geschweifte Klammern
 
 // Nested Objects
